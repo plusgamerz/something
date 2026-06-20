@@ -8,7 +8,7 @@ import torch
 app = Flask(__name__)
 CORS(app)  # Fix: allow cross-origin requests so the page works from any origin
 
-MODEL_NAME = os.environ.get('LOCAL_AI_MODEL', 'google/flan-t5-xl')
+MODEL_NAME = 'google/flan-t5-xl'
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 MAX_INPUT_TOKENS = 512
 
